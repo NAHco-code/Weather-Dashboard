@@ -18,6 +18,11 @@ header div.header_wrapper{
     padding: 10px 15px 0 15px;
 }
 
+#header_text{
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px rgba(72, 66, 75, 0.623)
+}
+
 main{
     height: 100%;
 }
@@ -26,11 +31,27 @@ div.row{
     height: 100%;
 }
 
+.search_box_wrapper{
+    background: lightgrey;
+    border-bottom: 10px solid lightgrey;
+    border-left: 10px solid lightgrey;
+    border-top: 10px solid lightgrey;
+    border-radius: 5px;
+    height: 500px;
+}
+
 .search_box{
     border-radius: 5px;
     height: 525px;
-    background: rgba(109, 57, 129, 0.692);
+    background: rgba(86, 45, 102, 0.808);
     padding: 10px;
+}
+
+#search_box_text{
+    color: lightgrey;
+    font-weight: 500;
+    padding: 0;
+    text-shadow: 1px 1px 1px rgba(72, 66, 75, 0.712);
 }
 
 #search_bar{
@@ -83,6 +104,10 @@ div#current_city{
     height: 500px;
 }
 
+div.forecast_wrapper{
+    border: 2px solid lightgrey;
+}
+
 div#current_conditions{
     background: rgba(0, 90, 163, 0.65);
     border-radius: 5px;
@@ -96,7 +121,7 @@ div#week_forecast{
     display: flex;
     height: 275px;
     flex-direction: column;
-    padding: 10px 10px;
+    padding: 15px 15px;
 }
 
 div.forecast_content_wrapper{
@@ -109,9 +134,5 @@ div.day_forecast{
     background: rgb(0, 90, 163);
     border-radius: 5px;
     width: 110px;
-    height: 200px;
+    height: 180px;
 }
-
-
-
-
