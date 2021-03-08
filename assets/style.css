@@ -125,6 +125,18 @@ div#current_conditions{
     padding: 15px 15px;
 }
 
+div.current_header{
+    display: flex;
+}
+
+p#today{
+
+}
+
+img#current_icon{
+
+}
+
 div#week_forecast{
     background: whitesmoke;
     border-radius: 5px;
