@@ -20,7 +20,7 @@ header div.header_wrapper{
 
 #header_text{
     color: whitesmoke;
-    text-shadow: 3px 3px 5px rgba(72, 66, 75, 0.623)
+    text-shadow: 3px 3px 5px rgba(72, 66, 75, 0.623);
 }
 
 main{
@@ -45,6 +45,7 @@ div.row{
     height: 525px;
     background: rgba(86, 45, 102, 0.808);
     padding: 10px;
+    /* min-width: 308px; */
 }
 
 #search_box_text{
@@ -60,13 +61,22 @@ div.row{
     margin-bottom: 20px;
 }
 
-.input-group.input{
+div#search_bar,
+form.searchform,
+div.input-group,
+input.input[type="text"]{
     display: flex;
-    align-content: stretch;
+    flex-shrink: 2;
+    /* align-items: stretch; */
+}
+
+div.input-group{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
-button.btn.btn-default{
+button#search_btn{
     background: rgb(0, 90, 163);
     z-index: 99;
     padding: 0 4px;
@@ -75,7 +85,7 @@ button.btn.btn-default{
 
 i{
     color: white;
-    position: inline;
+    /* position: inline; */
 }
 
 div.search_history_container{
@@ -91,7 +101,7 @@ div.search_history{
     display: block;
     font-size: 14px;
     height: 40px;
-    padding: 10px 0 10px 15px;
+    padding: 10px 0 10px 10px;
     margin: 0;
 }
 
@@ -121,7 +131,7 @@ div#week_forecast{
     display: flex;
     height: 275px;
     flex-direction: column;
-    padding: 15px 15px;
+    padding: 10px 10px;
 }
 
 div.forecast_content_wrapper{
