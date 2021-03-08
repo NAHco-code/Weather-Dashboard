@@ -46,7 +46,6 @@ function getCurrent(cityInput) {
                 getForecast(data.coord.lat, data.coord.lon);
 
             })
-
         }
     })
 };
@@ -56,7 +55,21 @@ function getCurrent(cityInput) {
 function getForecast(latitude, longitude) {
     let forecastUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=imperial&exclude=hourly,minutely&appid=8d9ace3ef89c0fbba0cc95223e221079';
 
+    fetch(forecastUrl).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
 
+                console.log(data)
+
+                // let tempResult = document.createElement('p');
+                // let temperature = document.querySelector('#current_temp').appendChild(tempResult);
+
+                let uvIndex = document.querySelector('#current_uv_index');
+                uvIndex.textContent = 'UV Index: ' + data.current.uvi;
+
+            })
+        }
+    })
 };
 
 //add event listener to search button
