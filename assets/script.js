@@ -72,6 +72,25 @@ function getForecast(latitude, longitude) {
     })
 };
 
+//define function to render search history
+function printCityList() {
+    //To Do - clear previous selection before appending
+    for (i = 0; i < cityList.length; i++) {
+
+        let searchHistoryEl = document.createElement('div');
+        searchHistoryEl.classList.add('search_history');
+        searchHistoryEl.textContent = cityList[i];
+
+        searchHistoryEl.addEventListener('click', function (event) {
+            let userInput = event.target.innerText;
+            getCurrent(userInput);
+
+        })
+
+        document.querySelector('.search_history_container').appendChild(searchHistoryEl)
+    }
+}
+
 //add event listener to search button
 searchBtnEl.addEventListener('click', function (event) {
     event.preventDefault();
@@ -82,10 +101,8 @@ searchBtnEl.addEventListener('click', function (event) {
     getCurrent(userInput);
 
     //call function to render search history within this function for access to needed variables
-    // cityList.push(userInput);
-    // printCityList();
+    cityList.push(userInput);
+    printCityList();
 });
-
-//To Do - define function to render search history
 
 //To Do - store search history in local storage
