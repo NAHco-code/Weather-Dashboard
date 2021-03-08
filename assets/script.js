@@ -35,12 +35,29 @@ function getCurrent(cityInput) {
                 console.log(data)
 
                 //append data from API to DOM
-                let tempResult = document.createElement('p');
-                let temperature = document.querySelector('#current_temp').appendChild(tempResult);
+                let cityName = document.querySelector('#city_name');
+                cityName.textContent = data.name;
+
+                // let today = document.querySelector('#today');
+                // today.innerHTML = '00.00.0000'; NOT WORKING
+
+                // let icon = document.querySelector('#current_icon');
+                // icon.textContent = data.weather.icon; NOT WORKING
+
+                let temp = document.querySelector('#current_temp');
+                temp.textContent = 'Temperature: ' + data.main.temp + ' F';
+
+                let humidity = document.querySelector('#current_humid');
+                humidity.textContent = 'Humidity:  ' + data.main.humidity + '%';
+
+                let windSpeed = document.querySelector('#current_wind');
+                windSpeed.textContent = 'Wind Speed: ' + data.wind.speed + ' mph';
+
+                //access uv index from onecall used for 5 day forecast
 
                 //testing
-                console.log(data.name);
-                console.log(data.main.humidity);
+                console.log(data.weather[0].icon);
+                // console.log(data.main.humidity);
 
                 //call function to render 5 day forecast in this function for access to latitude and longitude from city search in current weather function
                 getForecast(data.coord.lat, data.coord.lon);
@@ -61,11 +78,15 @@ function getForecast(latitude, longitude) {
 
                 console.log(data)
 
-                // let tempResult = document.createElement('p');
-                // let temperature = document.querySelector('#current_temp').appendChild(tempResult);
-
-                let uvIndex = document.querySelector('#current_uv_index');
+                //append uv data to current conditions div
+                let uvIndex = document.querySelector('#current_uv');
                 uvIndex.textContent = 'UV Index: ' + data.current.uvi;
+
+                // let today = document.querySelector('#today');
+                // today.innerHTML = '00.00.0000';
+
+                // let icon = document.querySelector('#current_icon');
+                // icon.textContent = data.weather.icon;
 
             })
         }
