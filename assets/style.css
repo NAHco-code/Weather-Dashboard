@@ -116,10 +116,10 @@ div.search_history{
     border: 0.5px solid var(--bg-color);
     color: #b13805;
     display: block;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
     height: 40px;
-    padding: 10px 0 10px 10px;
+    padding: 7px 0 12px 12px;
     margin: 0;
 }
 
@@ -154,11 +154,14 @@ div#current_conditions{
 
 #city_header_wrap h2{
     color: #0ee2e6;
+    border-bottom: 5px solid #FEB032;
+    border-radius: 5px;
     font-family: 'Noto Sans', sans-serif;
     font-size: 2.2em;
     font-weight: 600;
     height: auto;
     margin: 0;
+    padding: 0 5px 3px 5px;
     text-shadow: 4px 4px 5px #912e04f1;
     text-transform: uppercase;
     width: auto;
@@ -172,13 +175,14 @@ div#date_icon_wrap{
 }
 
 #today{
-    font-size: 25px;
+    font-size: 1.7em;
+    font-weight: 300;
     color: #F7C080;
 }
 
-img#current_icon{
+/* img#current_icon{
 
-}
+} */
 
 div#top_temp_wrap,
 div#top_hum_wrap{
@@ -207,6 +211,9 @@ div#bottom_cast_wrap{
 
 h4{
     color:#F7C080;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1.7em;
     padding: 0 0 15px 0;
 }
 

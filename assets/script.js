@@ -127,15 +127,12 @@ function getForecast(latitude, longitude) {
                 let humid5 = document.querySelector('#humid_5');
                 humid5.textContent = data.daily[5].humidity;
 
-                // let dataTxt = document.getElementsByClassName('data_txt');
-                // for (let i = 0; i < dataTxt.length; i++) {
-
-                // }
-
             })
         }
     })
 };
+
+
 
 //define function to render search history
 function printCityList() {
