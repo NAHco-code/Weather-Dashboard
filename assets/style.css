@@ -91,6 +91,8 @@ i{
 div.search_history_container{
     background: whitesmoke;
     border: 0.5px 1px;
+    width:auto;
+    height: auto;
 }
 
 div.search_history{

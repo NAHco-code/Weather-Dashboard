@@ -152,6 +152,8 @@ function printCityList() {
     }
 }
 
+getCurrent('Columbus');
+
 //add event listener to search button
 searchBtnEl.addEventListener('click', function (event) {
     event.preventDefault();
