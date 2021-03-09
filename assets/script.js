@@ -58,10 +58,10 @@ function getCurrent(cityInput) {
                 // icon.innerHTML = '<img src=`http://openweathermap.org/img/wn/`' +iconCall+ '.png id="current_icon" alt="weather icon"/>';
 
                 let temp = document.querySelector('#current_temp');
-                temp.textContent = 'Temperature: ' + data.main.temp + ' f';
+                temp.textContent = 'Temperature: ' + data.main.temp;
 
                 let humidity = document.querySelector('#current_humid');
-                humidity.textContent = 'Humidity:  ' + data.main.humidity + '%';
+                humidity.textContent = 'Humidity:  ' + data.main.humidity;
 
                 let windSpeed = document.querySelector('#current_wind');
                 windSpeed.textContent = 'Wind Speed: ' + data.wind.speed + ' mph';
@@ -102,30 +102,35 @@ function getForecast(latitude, longitude) {
                 // for (i = 0; i < forecast.length; i++)
 
                 let temp1 = document.querySelector('#temp_1');
-                temp1.textContent = 'Temp: ' + data.daily[1].temp.day + ' f';
+                temp1.textContent = data.daily[1].temp.day;
                 let temp2 = document.querySelector('#temp_2');
-                temp2.textContent = 'Temp: ' + data.daily[2].temp.day + ' f';
+                temp2.textContent = data.daily[2].temp.day;
                 let temp3 = document.querySelector('#temp_3');
-                temp3.textContent = 'Temp: ' + data.daily[3].temp.day + ' f';
+                temp3.textContent = data.daily[3].temp.day;
                 let temp4 = document.querySelector('#temp_4');
-                temp4.textContent = 'Temp: ' + data.daily[4].temp.day + ' f';
+                temp4.textContent = data.daily[4].temp.day;
                 let temp5 = document.querySelector('#temp_5');
-                temp5.textContent = 'Temp: ' + data.daily[5].temp.day + ' f';
+                temp5.textContent = data.daily[5].temp.day;
 
 
                 //humidity forecast
                 //TODO for loop
                 // for (i = 0; i < forecast.length; i++)
                 let humid1 = document.querySelector('#humid_1');
-                humid1.textContent = 'Humidity: ' + data.daily[1].humidity + '%';
+                humid1.textContent = data.daily[1].humidity;
                 let humid2 = document.querySelector('#humid_2');
-                humid2.textContent = 'Humidity: ' + data.daily[2].humidity + '%';
+                humid2.textContent = data.daily[2].humidity;
                 let humid3 = document.querySelector('#humid_3');
-                humid3.textContent = 'Humidity: ' + data.daily[3].humidity + '%';
+                humid3.textContent = data.daily[3].humidity;
                 let humid4 = document.querySelector('#humid_4');
-                humid4.textContent = 'Humidity: ' + data.daily[4].humidity + '%';
+                humid4.textContent = data.daily[4].humidity;
                 let humid5 = document.querySelector('#humid_5');
-                humid5.textContent = 'Humidity: ' + data.daily[5].humidity + '%';
+                humid5.textContent = data.daily[5].humidity;
+
+                // let dataTxt = document.getElementsByClassName('data_txt');
+                // for (let i = 0; i < dataTxt.length; i++) {
+
+                // }
 
             })
         }

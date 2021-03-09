@@ -61,54 +61,103 @@
             <div class="col-9" id="current_city">
                 <div class="forecast_wrapper" id="top_cast_wrap">
                     <div class="display" id="current_conditions">
-                        <div class="current_header">
-                            <h2 id="city_name">Columbus</h2>
-                            <p id="today"></p>
-                            <img src="" id="current_icon" alt="weather icon"/>
+                        <div id="city_header_wrap">
+                            <h2 class="" id="city_name">Columbus</h2>
+                        </div>
+                        <div id="date_icon_wrap">
+                            <h3 class="data_txt" id="today"></h3>
+                            <!-- <img id="current_icon" src="" alt="weather icon"/> -->
                         </div>
                         <div class="current_body">
-                            <p id="current_temp">Temperature: --</p>
-                            <p id="current_humid">Humidity: --</p>
-                            <p id="current_wind">Wind Speed: --</p>
-                            <p id="current_uv">UV Index: --</p>
+                            <div id="top_temp_wrap">
+                                <p class="data_txt"id="current_temp"></p>
+                                <div id="top_degree">&nbsp;&#8457;</div>
+                            </div>
+                            <div id="top_hum_wrap">
+                                <p class="data_txt" id="current_humid"></p>
+                                <div id="top_percent">&nbsp;&#37;</div>
+                            </div>
+
+                            <p class="data_txt" id="current_wind">Wind Speed: </p>
+                            <p class="data_txt" id="current_uv">UV Index: </p>
                         </div>
                     </div>
                 </div>
                 <div class="forecast_wrapper" id="bottom_cast_wrap">
                     <div class="display" id="week_forecast">
                         <div class="forecast_title">
-                            <h3>5-Day Forecast:</h3>
-                        </div><br />
+                            <h4>5-Day Forecast:</h4>
+                        </div>
                         <div class="forecast_content_wrapper">
                             <div class="day_forecast">
-                                <div id="date_1">Date -- </div>
-                                <div id="card_icon"><img src="" class="week_icon" alt="weather icon" /></div>
-                                <div id="temp_1">Temp: --</div>
-                                <div id="humid_1">Humidity: --</div>
+                                <div class="fc_txt date" id="date_1">Date -- </div>
+                                <div class="fc_txt" id="card_icon">
+                                    <!-- <img src="" class="week_icon" alt="weather icon" /> -->
+                                </div><br /><br /><br />
+                                <div class="fc_txt spacing temp_wrap"><span class="temp_txt">Temp:&nbsp;</span>
+                                    <div class="data_txt temp" id="temp_1"></div>
+                                    <div class="degree">&nbsp;&#8457;</div>
+                                </div>
+                                <div class="fc_txt spacing hum_wrap"><span class="hum_txt">Humidity:&nbsp;</span>
+                                    <div class="data_txt" id="humid_1"></div>
+                                    <div class="percent">&nbsp;&#37;</div>
+                                </div>
                             </div>
                             <div class="day_forecast">
-                                <div id="date_2">Date -- </div>
-                                <div id="card_icon"><img src="" class="week_icon" alt="weather icon" /></div>
-                                <div id="temp_2">Temp: --</div>
-                                <div id="humid_2">Humidity: --</div>
+                                <div class="fc_txt date" id="date_2">Date -- </div>
+                                <div class="fc_txt" id="card_icon">
+                                    <!-- <img src="" class="week_icon" alt="weather icon" /> -->
+                                </div><br /><br /><br />
+                                <div class="fc_txt spacing temp_wrap"><span class="temp_txt">Temp:&nbsp;</span>
+                                    <div class="data_txt  temp" id="temp_2"></div>
+                                    <div class="degree">&nbsp;&#8457;</div>
+                                </div>
+                                <div class="fc_txt spacing hum_wrap"><span class="hum_txt">Humidity:&nbsp;</span>
+                                    <div class="data_txt" id="humid_2"></div>
+                                    <div class="percent">&nbsp;&#37;</div>
+                                </div>
                             </div>
                             <div class="day_forecast">
-                                <div id="date_3">Date -- </div>
-                                <div id="card_icon"><img src="" class="week_icon" alt="weather icon" /></div>
-                                <div id="temp_3">Temp: --</div>
-                                <div id="humid_3">Humidity: --</div>
+                                <div class="fc_txt date" id="date_3">Date -- </div>
+                                <div class="fc_txt" id="card_icon">
+                                    <!-- <img src="" class="week_icon" alt="weather icon" /> -->
+                                </div><br /><br /><br />
+                                <div class="fc_txt spacing temp_wrap"><span class="temp_txt">Temp:&nbsp;</span>
+                                    <div class="data_txt  temp" id="temp_3"></div>
+                                    <div class="degree">&nbsp;&#8457;</div>
+                                </div>
+                                <div class="fc_txt spacing hum_wrap"><span class="hum_txt">Humidity:&nbsp;</span>
+                                    <div class="data_txt" id="humid_3"></div>
+                                    <div class="percent">&nbsp;&#37;</div>
+                                </div>
                             </div>
                             <div class="day_forecast">
-                                <div id="date_4">Date -- </div>
-                                <div id="card_icon"><img src="" class="week_icon" alt="weather icon" /></div>
-                                <div id="temp_4">Temp: --</div>
-                                <div id="humid_4">Humidity: --</div>
+                                <div class="fc_txt date" id="date_4">Date -- </div>
+                                <div class="fc_txt" id="card_icon">
+                                    <!-- <img src="" class="week_icon" alt="weather icon" /> -->
+                                </div><br /><br /><br />
+                                <div class="fc_txt spacing temp_wrap"><span class="temp_txt">Temp:&nbsp;</span>
+                                    <div class="data_txt  temp" id="temp_4"></div>
+                                    <div class="degree">&nbsp;&#8457;</div>
+                                </div>
+                                <div class="fc_txt spacing hum_wrap"><span class="hum_txt">Humidity:&nbsp;</span>
+                                    <div class="data_txt" id="humid_4"></div>
+                                    <div class="percent">&nbsp;&#37;</div>
+                                </div>
                             </div>
                             <div class="day_forecast">
-                                <div id="date_5">Date -- </div>
-                                <div id="card_icon"><img src="" class="week_icon" alt="weather icon" /></div>
-                                <div id="temp_5">Temp: --</div>
-                                <div id="humid_5">Humidity: --</div>
+                                <div class="fc_txt date" id="date_5">Date -- </div>
+                                <div class="fc_txt" id="card_icon">
+                                    <!-- <img src="" class="week_icon" alt="weather icon" /> -->
+                                </div><br /><br /><br />
+                                <div class="fc_txt spacing temp_wrap"><span class="temp_txt">Temp:&nbsp;</span>
+                                    <div class="data_txt temp" id="temp_5"></div>
+                                    <div class="degree">&nbsp;&#8457;</div>
+                                </div>
+                                <div class="fc_txt spacing hum_wrap"><span class="hum_txt">Humidity:&nbsp;</span>
+                                    <div class="data_txt" id="humid_5"></div>
+                                    <div class="percent">&nbsp;&#37;</div>
+                                </div>
                             </div>
                         </div>
                     </div>
