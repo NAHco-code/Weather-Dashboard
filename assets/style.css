@@ -104,7 +104,7 @@ i{
     /* position: inline; */
 }
 
-div.search_history_container{
+div#search_history_container{
     background: #F7E8BD;
     border: 0.5px 1px;
     width:auto;

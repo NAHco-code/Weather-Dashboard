@@ -1,29 +1,18 @@
-// DECLARE GLOBAL
-const searchBtnEl = document.querySelector('#search_btn');
-let cityInput = document.querySelector('#search_input');
-let cityList = [];
+//PAGE LOAD//
+//*** GET SAVED ITEMS FROM LOCAL STORAGE ***//
+let savedSearchArray = JSON.parse(localStorage.getItem('savedSearchArray'));
 
+if (!savedSearchArray) {
+    let savedSearchArray =
+        ['Columbus',
+            'Bend',
+            'Los Angeles',
+            'San Francisco',
+            'Savannah',
+            'New York'];
+}
 
-// arrays to organize locally stored data
-//use to populate current forecast from search history
-const currentForecast = [{
-    temp: '',
-    humidity: ['', '%'],
-    wind: ['', 'mph'],
-    uv: ''
-}];
-
-//use to populate 5 day forecast from search history
-const weekForecast = [{
-    date: '',
-    icon: '',
-    temp: '',
-    humidity: '',
-}];
-
-//To Do - render search history from local storage on page load
-
-//dates
+//global date variables
 let today = document.querySelector('#today');
 today.textContent = moment().format('ll');
 let tomorrow = document.querySelector('#date_1');
@@ -39,9 +28,11 @@ tomorrow5.textContent = moment().add(5, 'days').format('ll');
 
 
 //define function to access current weather conditions
-function getCurrent(cityInput) {
+const searchBtnEl = document.querySelector('#search_btn');
+let searchInputEl = document.querySelector('#search_input');
+function getCurrent(searchInputEl) {
 
-    let currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=8d9ace3ef89c0fbba0cc95223e221079';
+    let currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInputEl + '&units=imperial&appid=c6a9bf78cf3b504fe7e8382ca53765c4';
 
     fetch(currentWeatherUrl).then(function (response) {
         if (response.ok) {
@@ -66,14 +57,13 @@ function getCurrent(cityInput) {
                 let windSpeed = document.querySelector('#current_wind');
                 windSpeed.textContent = 'Wind Speed: ' + data.wind.speed + ' mph';
 
-                //access uv index from onecall used for 5 day forecast
-
                 //testing
                 console.log(data.weather[0].icon);
 
                 //call function to render 5 day forecast in this function for access to latitude and longitude from city search in current weather function
                 getForecast(data.coord.lat, data.coord.lon);
 
+                //access uv index from onecall used for 5 day forecast
             })
         }
     })
@@ -82,7 +72,7 @@ function getCurrent(cityInput) {
 //define function to get 5 day forecast //access lat and lon from previous function
 //use one call API instead of 5 day forecast //better accessibility to needed information
 function getForecast(latitude, longitude) {
-    let forecastUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=imperial&exclude=hourly,minutely&appid=8d9ace3ef89c0fbba0cc95223e221079';
+    let forecastUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=imperial&exclude=hourly,minutely&appid=c6a9bf78cf3b504fe7e8382ca53765c4';
 
     fetch(forecastUrl).then(function (response) {
         if (response.ok) {
@@ -100,7 +90,6 @@ function getForecast(latitude, longitude) {
                 //temp forecast
                 //TODO for loop
                 // for (i = 0; i < forecast.length; i++)
-
                 let temp1 = document.querySelector('#temp_1');
                 temp1.textContent = data.daily[1].temp.day;
                 let temp2 = document.querySelector('#temp_2');
@@ -133,28 +122,34 @@ function getForecast(latitude, longitude) {
 };
 
 
+//select each search history div
+// const searchHistCon = document.querySelector('#search_history_container')
+// let searchedItemEl = searchHistCon.querySelectorAll('div.search_history');
+
+// console.log(searchedItemEl);
 
 //define function to render search history
-function printCityList() {
+function renderSearchHistory() {
     //clear previous selection before appending
 
-    for (i = 0; i < cityList.length; i++) {
+    for (i = 0; i < savedSearchArray.length; i++) {
 
-        let searchHistoryEl = document.createElement('div');
-        searchHistoryEl.classList.add('search_history');
-        searchHistoryEl.textContent = cityList[i];
+        let newSearchedItem = document.createElement('div');
+        newSearchedItem.classList.add('search_history');
+        newSearchedItem.textContent = savedSearchArray[i];
 
-        searchHistoryEl.addEventListener('click', function (event) {
-            let userInput = event.target.innerText;
-            getCurrent(userInput);
+        newSearchedItem.addEventListener('click', function (event) {
+            let userCity = event.target.innerText;
+            getCurrent(userCity);
 
         })
 
-        document.querySelector('.search_history_container').appendChild(searchHistoryEl)
+        searchHistCon.appendChild(newSearchedItem)
     }
 }
 
 getCurrent('Columbus');
+
 
 //add event listener to search button
 searchBtnEl.addEventListener('click', function (event) {
@@ -162,12 +157,40 @@ searchBtnEl.addEventListener('click', function (event) {
 
     //use event to access user input
     console.log(event);
-    let userInput = cityInput.value;
-    getCurrent(userInput);
+    let userCity = searchInputEl.value;
+
+    getCurrent(userCity);
+
+    //if statement to evaluate - if there is a value in search history
+    // then loop through the savedTasksArray and push the value onto the array if the labeled time on timeblock matches the time value in the savedTasksArray
+    // let contains = function(userCity) {
+
+    //     let findNaN = userCity !== userCity;
+    //     let indexOf;
+
+    //     if (!findNaN && typeof Array.prototype.indexOf === 'function') {
+    //         indexOf = Array.prototype.indexOf;
+    //     } else {
+    //         indexOf = function (userCity) {
+    //             let i = -1, index = -1;
+
+    //             for (i = 0; i < this.length; i++) {
+    //                 let newSearch = this[i];
+
+    //                 if ((findNaN && newSearch !== newSearch) || newSearch === userCity) {
+    //                     index = i;
+
+    //                 }
+    //             }
+    //         };
+    //     }
+    // }
+
 
     //call function to render search history within this function for access to needed variables
-    cityList.push(userInput);
-    printCityList();
+    savedSearchArray.push(userCity);
+
+    renderSearchHistory();
 });
 
 //To Do - store search history in local storage
