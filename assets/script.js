@@ -1,8 +1,8 @@
 //PAGE LOAD//
 //*** GET SAVED ITEMS FROM LOCAL STORAGE ***//
-let savedSearchArray = JSON.parse(localStorage.getItem('savedSearchArray'));
+// let savedSearchArray = JSON.parse(localStorage.getItem('savedSearchArray'));
 
-if (!savedSearchArray) {
+// if (!savedSearchArray) {
     let savedSearchArray =
         ['Columbus',
             'Bend',
@@ -10,7 +10,7 @@ if (!savedSearchArray) {
             'San Francisco',
             'Savannah',
             'New York'];
-}
+
 
 //global date variables
 let today = document.querySelector('#today');
@@ -162,7 +162,15 @@ searchBtnEl.addEventListener('click', function (event) {
 
     getCurrent(userInput);
 
-    //if statement to evaluate - if there is a value in search history
+    //call function to render search history within this function for access to needed variables
+    savedSearchArray.push(userInput);
+
+    renderSearchHistory();
+});
+
+//To Do - store search history in local storage
+
+//if statement to evaluate - if there is a value in search history
     // then loop through the savedTasksArray and push the value onto the array if the labeled time on timeblock matches the time value in the savedTasksArray
     // let contains = function(userInput) {
 
@@ -186,12 +194,3 @@ searchBtnEl.addEventListener('click', function (event) {
     //         };
     //     }
     // }
-
-
-    //call function to render search history within this function for access to needed variables
-    savedSearchArray.push(userInput);
-
-    renderSearchHistory();
-});
-
-//To Do - store search history in local storage
