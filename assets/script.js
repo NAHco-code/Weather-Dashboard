@@ -30,6 +30,7 @@ tomorrow5.textContent = moment().add(5, 'days').format('ll');
 //define function to access current weather conditions
 const searchBtnEl = document.querySelector('#search_btn');
 let searchInputEl = document.querySelector('#search_input');
+
 function getCurrent(searchInputEl) {
 
     let currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInputEl + '&units=imperial&appid=c6a9bf78cf3b504fe7e8382ca53765c4';
@@ -123,10 +124,10 @@ function getForecast(latitude, longitude) {
 
 
 //select each search history div
-// const searchHistCon = document.querySelector('#search_history_container')
-// let searchedItemEl = searchHistCon.querySelectorAll('div.search_history');
+let searchHistCon = document.querySelector('#search_history_container')
+let searchedItemEl = searchHistCon.querySelectorAll('div.search_history');
 
-// console.log(searchedItemEl);
+console.log(searchedItemEl);
 
 //define function to render search history
 function renderSearchHistory() {
@@ -139,8 +140,8 @@ function renderSearchHistory() {
         newSearchedItem.textContent = savedSearchArray[i];
 
         newSearchedItem.addEventListener('click', function (event) {
-            let userCity = event.target.innerText;
-            getCurrent(userCity);
+            let newUserInput = event.target.innerText;
+            getCurrent(newUserInput);
 
         })
 
@@ -148,7 +149,7 @@ function renderSearchHistory() {
     }
 }
 
-getCurrent('Columbus');
+// getCurrent('Columbus');
 
 
 //add event listener to search button
@@ -157,27 +158,27 @@ searchBtnEl.addEventListener('click', function (event) {
 
     //use event to access user input
     console.log(event);
-    let userCity = searchInputEl.value;
+    let userInput= searchInputEl.value;
 
-    getCurrent(userCity);
+    getCurrent(userInput);
 
     //if statement to evaluate - if there is a value in search history
     // then loop through the savedTasksArray and push the value onto the array if the labeled time on timeblock matches the time value in the savedTasksArray
-    // let contains = function(userCity) {
+    // let contains = function(userInput) {
 
-    //     let findNaN = userCity !== userCity;
+    //     let findNaN = userInput !== userInput;
     //     let indexOf;
 
     //     if (!findNaN && typeof Array.prototype.indexOf === 'function') {
     //         indexOf = Array.prototype.indexOf;
     //     } else {
-    //         indexOf = function (userCity) {
+    //         indexOf = function (userInput) {
     //             let i = -1, index = -1;
 
     //             for (i = 0; i < this.length; i++) {
     //                 let newSearch = this[i];
 
-    //                 if ((findNaN && newSearch !== newSearch) || newSearch === userCity) {
+    //                 if ((findNaN && newSearch !== newSearch) || newSearch === userInput) {
     //                     index = i;
 
     //                 }
@@ -188,7 +189,7 @@ searchBtnEl.addEventListener('click', function (event) {
 
 
     //call function to render search history within this function for access to needed variables
-    savedSearchArray.push(userCity);
+    savedSearchArray.push(userInput);
 
     renderSearchHistory();
 });
