@@ -3,13 +3,13 @@
 // let savedSearchArray = JSON.parse(localStorage.getItem('savedSearchArray'));
 
 // if (!savedSearchArray) {
-    let savedSearchArray =
-        ['Columbus',
-            'Bend',
-            'Los Angeles',
-            'San Francisco',
-            'Savannah',
-            'New York'];
+let savedSearchArray =
+    ['Columbus',
+        'Bend',
+        'Los Angeles',
+        'San Francisco',
+        'Savannah',
+        'New York'];
 
 
 //global date variables
@@ -149,8 +149,8 @@ function renderSearchHistory() {
     }
 }
 
-// getCurrent('Columbus');
-
+getCurrent('Columbus');
+renderSearchHistory(savedSearchArray);
 
 //add event listener to search button
 searchBtnEl.addEventListener('click', function (event) {
