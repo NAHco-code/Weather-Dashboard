@@ -12,11 +12,11 @@ User experience is intuitive and easy to navigate; user interface style is clean
 
 ## Bug Fix Road Map
 
-Currently building script.
+Currently working on local storage and rendering weather icons. Search history appends entire search history + most recently serached - must clear data that is already rendered before appending.
 
 ### Visuals
 
-![screenshot]()
+![screenshot](/assets/images/weatherDash.png)
 
 ![screenshot]()
 

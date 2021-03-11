@@ -45,9 +45,10 @@ function getCurrent(searchInputEl) {
                 let cityName = document.querySelector('#city_name');
                 cityName.textContent = data.name;
 
-                // let icon = document.querySelector('#current_icon');
-                // let iconCall = data.weather[0].icon;
-                // icon.innerHTML = '<img src=`http://openweathermap.org/img/wn/`' +iconCall+ '.png id="current_icon" alt="weather icon"/>';
+                //icon not working
+                let icon = document.querySelector('#current_icon');
+                let iconCall = data.weather[0].icon;
+                icon.setAttribute =  ('img', 'src=`http://openweathermap.org/img/wn/`' +iconCall+ '.png');
 
                 let temp = document.querySelector('#current_temp');
                 temp.textContent = 'Temperature: ' + data.main.temp;
