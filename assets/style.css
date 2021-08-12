@@ -23,8 +23,6 @@ header{
 }
 
 header div.header_wrapper{
-    border-top: 35px solid #0ca6a9c0;
-    border-radius: 50px;
     padding: 10px 15px 0 35px;
 }
 
@@ -38,12 +36,12 @@ header div.header_wrapper{
 }
 
 main{
-    height: 100%;
+    height: 100vh;
 }
 
-div.row{
+/* div.row{
     height: 100%;
-}
+} */
 
 .search_box_wrapper{
     background: var(--bg-color);
@@ -59,14 +57,15 @@ div.row{
     border-right: 10px solid #912e04f1;
     border-radius: 5px;
     height: auto;
-    padding: 20px 30px 75px 30px;
+    min-width: fit-content;
+    /* padding: 5px; */
     /* min-width: 308px; */
 }
 
 #search_box_text{
     color: #0ee2e6;
-    font-size: 1.4em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 300;
     padding: 0;
     text-shadow: 0.01 0.01 rgba(32, 32, 32, 0.616);
 }
@@ -121,6 +120,8 @@ div.search_history{
     height: 40px;
     padding: 7px 0 12px 12px;
     margin: 0;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 div#current_city{
