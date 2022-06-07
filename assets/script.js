@@ -62,9 +62,6 @@ function getCurrent(searchInputEl) {
                 let windSpeed = document.querySelector('#current_wind');
                 windSpeed.textContent = 'Wind Speed: ' + data.wind.speed + ' mph';
 
-                //testing
-                console.log(data.weather[0].icon);
-
                 //call function to render 5 day forecast in this function for access to latitude and longitude from city search in current weather function
                 getForecast(data.coord.lat, data.coord.lon);
 
@@ -89,8 +86,26 @@ function getForecast(latitude, longitude) {
                 let uvIndex = document.querySelector('#current_uv');
                 uvIndex.textContent = 'UV Index: ' + data.current.uvi;
 
-                // let icon = document.querySelector('#current_icon');
-                // icon.textContent = data.weather.icon;
+                //render icons
+                let icon1 = document.querySelector('#icon1');
+                let icon1Call = data.daily[1].weather[0].icon;
+                icon1.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon1Call+ '@2x.png');
+
+                let icon2 = document.querySelector('#icon2');
+                let icon2Call = data.daily[2].weather[0].icon;
+                icon2.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon2Call+ '@2x.png');
+
+                let icon3 = document.querySelector('#icon3');
+                let icon3Call = data.daily[3].weather[0].icon;
+                icon3.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon3Call+ '@2x.png');
+
+                let icon4 = document.querySelector('#icon4');
+                let icon4Call = data.daily[4].weather[0].icon;
+                icon4.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon4Call+ '@2x.png');
+
+                let icon5 = document.querySelector('#icon5');
+                let icon5Call = data.daily[5].weather[0].icon;
+                icon5.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon5Call+ '@2x.png');
 
                 //temp forecast
                 //TODO for loop
