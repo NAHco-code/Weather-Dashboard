@@ -45,98 +45,99 @@
             </div>
 
             <div class="d-flex flex-column align-items-center gy-2">
-                <div class="d-flex flex-column" id="current-conditions">
-                    <div class="">
+                <div class="" id="current-conditions">
+                    <div class="d-flex flex-column align-items-center">
                         <!-- Today's Date -->
                         <h3 class="" id="today"></h3>
-                        <h2 class="" id="city_name">Columbus</h2>
-                        <img class="" id="current-icon"/>
+                        <h2 class="" id="city-name"></h2>
+                        <div class="display-1" id="current_temp"></div>
+                        <!-- TODO: *Currently hardcoded -->
+                        <div class="lead text-muted" id="desc">Chilly</div>
+                        <img class="display-1" id="current-icon"/>
                     </div>
 
                     <div class="">
-                        <div class="" id="current_temp"></div>
                         <div class="" id="current_humid"></div>
                         <div class="" id="current_wind">Wind Speed: </div>
                         <div class="" id="current_uv">UV Index: </div>
                     </div>
                 </div>
 
-                <div class="d-flex flex-row gy-2">
+                <div class="d-flex flex-row justify-content-center">
                     <div class="" id="week_forecast">
-                        <h4 class="">5-Day Forecast:</h4>
-                        <div class="d-flex justify-content-between forecast_content_wrapper">
-                            <div class=" day_forecast">
+                        <div class="forecast-content-wrapper">
+                            <div class=" forecast-card">
                                 <div class="" id="date_1">Date -- </div>
                                 <div class="" id="card_icon">
                                     <img src="" class="week_icon" id="icon1"/>
                                 </div>
 
-                                <div class=""><span class="">Temp:&nbsp;</span>
-                                    <div class=" temp" id="temp_1"></div>
-                                    <div class="degree">&nbsp;&#8457;</div>
+                                <div class="forecast-info"><span class="">Temp:&nbsp;</span>
+                                    <div class="" id="temp_1"></div>
+                                    <div class="">&nbsp;&#8457;</div>
                                 </div>
 
-                                <div class=""><span class="hum_txt">Humidity:&nbsp;</span>
+                                <div class="forecast-info"><span class="hum_txt">Humidity:&nbsp;</span>
                                     <div class="" id="humid_1"></div>
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 px-1 day_forecast">
+                            <div class="px-1 forecast-card">
                                 <div class="" id="date_2">Date -- </div>
                                 <div class="" id="card_icon">
                                     <img src="" class="week_icon" id="icon2"/>
                                 </div>
 
-                                <div class=""><span class="">Temp:&nbsp;</span>
+                                <div class="forecast-info"><span class="">Temp:&nbsp;</span>
                                     <div class="" id="temp_2"></div>
                                     <div class="degree">&nbsp;&#8457;</div>
                                 </div>
 
-                                <div class=""><span class="hum_txt">Humidity:&nbsp;</span>
+                                <div class="forecast-info"><span class="hum_txt">Humidity:&nbsp;</span>
                                     <div class="" id="humid_2"></div>
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 px-1 day_forecast">
+                            <div class="px-1 forecast-card">
                                 <div class="" id="date_3">Date -- </div>
                                 <div class="" id="card_icon">
                                     <img src="" class="week_icon" id="icon3"/>
                                 </div>
 
-                                <div class=""><span class="">Temp:&nbsp;</span>
+                                <div class="forecast-info"><span class="">Temp:&nbsp;</span>
                                     <div class="" id="temp_3"></div>
                                     <div class="degree">&nbsp;&#8457;</div>
                                 </div>
 
-                                <div class=""><span class="hum_txt">Humidity:&nbsp;</span>
+                                <div class="forecast-info"><span class="hum_txt">Humidity:&nbsp;</span>
                                     <div class="" id="humid_3"></div>
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 px-1 day_forecast">
+                            <div class="px-1 forecast-card">
                                 <div class="" id="date_4">Date -- </div>
                                 <div class="" id="card_icon">
                                     <img src="" class="week_icon" id="icon4"/>
                                 </div>
-                                <div class=""><span class="">Temp:&nbsp;</span>
+                                <div class="forecast-info"><span class="">Temp:&nbsp;</span>
                                     <div class="" id="temp_4"></div>
                                     <div class="degree">&nbsp;&#8457;</div>
                                 </div>
-                                <div class=""><span class="hum_txt">Humidity:&nbsp;</span>
+                                <div class="forecast-info"><span class="hum_txt">Humidity:&nbsp;</span>
                                     <div class="" id="humid_4"></div>
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 px-1 day_forecast">
+                            <div class="px-1 forecast-card">
                                 <div class="" id="date_5">Date -- </div>
                                 <div class="" id="card_icon">
                                     <img src="" class="week_icon" id="icon5"/>
                                 </div>
-                                <div class=""><span class="">Temp:&nbsp;</span>
+                                <div class="forecast-info"><span class="">Temp:&nbsp;</span>
                                     <div class="" id="temp_5"></div>
                                     <div class="degree">&nbsp;&#8457;</div>
                                 </div>
-                                <div class=""><span class="hum_txt">Humidity:&nbsp;</span>
+                                <div class="forecast-info"><span class="hum_txt">Humidity:&nbsp;</span>
                                     <div class="" id="humid_5"></div>
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>

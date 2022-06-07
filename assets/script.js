@@ -45,7 +45,7 @@ function getCurrent(searchInputEl) {
                 console.log(data)
 
                 // Append data from API to DOM
-                let cityName = document.querySelector('#city_name');
+                let cityName = document.querySelector('#city-name');
                 cityName.textContent = data.name;
 
                 //icon not working
@@ -54,7 +54,7 @@ function getCurrent(searchInputEl) {
                 icon.setAttribute('src', 'http://openweathermap.org/img/wn/' +iconCall+ '.png');
 
                 let temp = document.querySelector('#current_temp');
-                temp.innerHTML = data.main.temp + `&nbsp;&#8457;`;
+                temp.innerHTML = Math.round(data.main.temp) + `&#186;`;
 
                 let humidity = document.querySelector('#current_humid');
                 humidity.innerHTML = 'Humidity:  ' + data.main.humidity + `&nbsp;&#37;`;
