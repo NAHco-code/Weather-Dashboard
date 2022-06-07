@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Weather Dashboard</title>
+    </head>
+    <body>
+        <header class="jumbotron-fluid px-2 py-1">
+            <div class="header_wrapper">
+                <h1 class="display-3" id="header_text">Hello.</h1>
+                <p class="lead" id="header_tagline">Your weather for today is...</p>
+            </div>
+            <hr class="mt-4 mb-1">
+        </header>
+        <main class="container-fluid">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Weather Dashboard</title>
-</head>
-
-<body>
-    <header class="jumbotron-fluid">
-        <div class="header_wrapper">
-            <h1 class="display-3" id="header_text">Hello.</h1>
-            <p class="lead" id="header_tagline">Your weather for today is...</p>
-        </div>
-        <hr class="mt-4 mb-1">
-    </header>
-    <main>
-        <div class="container-fluid row align-items-start" id="">
-            <div class="search_box_wrapper col-3 py-1">
-                <div class="search_box">
+            <div class="container">
+                <div class="col-sm-12">
                     <p id="search_box_text">Search for a City:</p>
 
                     <div class="" id="search_bar">
@@ -43,43 +41,34 @@
                     </div>
                     <br />
 
-                    <div id="search_history_container">
+                    <div class="py-3" id="search_history_container">
                         <!--append search history in script-->
                     </div>
                 </div>
             </div>
-            <div class="col-9" id="current_city">
-                <div class="forecast_wrapper" id="top_cast_wrap">
-                    <div class="display" id="current_conditions">
-                        <div id="city_header_wrap">
-                            <h2 class="" id="city_name">Columbus</h2>
-                        </div>
-                        <div id="date_icon_wrap">
-                            <h3 class="data_txt" id="today"></h3>
-                            <img id="current_icon" src=""/>
-                        </div>
-                        <div class="current_body">
-                            <div id="row top_temp_wrap">
-                                <span class="data_txt"id="current_temp"></span>
-                                <span id="top_degree">&nbsp;&#8457;</span>
-                            </div>
-                            <div id="row top_hum_wrap">
-                                <span class="data_txt" id="current_humid"></span>
-                                <span id="top_percent">&nbsp;&#37;</span>
-                            </div>
 
+            <div class="container" id="current_city">
+                <div class="row" id="top_cast_wrap">
+                    <div class="col-12" id="current_conditions">
+                        <div class="row py-2">
+                            <h3 class="col-4 data_txt" id="today"></h3>
+                            <h2 class="col-4" id="city_name">Columbus</h2>
+                            <img class="col-4" id="current_icon" src=""/>
+                        </div>
+                        <div class="col-12 current_body">
+                            <div class="data_txt" id="current_temp">&nbsp;&#8457;</div>
+                            <div class="data_txt" id="current_humid">&nbsp;&#37;</div>
                             <div class="data_txt" id="current_wind">Wind Speed: </div>
                             <div class="data_txt" id="current_uv">UV Index: </div>
                         </div>
                     </div>
                 </div>
-                <div class="forecast_wrapper" id="bottom_cast_wrap">
-                    <div class="display" id="week_forecast">
-                        <div class="forecast_title">
-                            <h4>5-Day Forecast:</h4>
-                        </div>
-                        <div class="row forecast_content_wrapper">
-                            <div class="col-2 day_forecast">
+                <div class="row py-3" id="bottom_cast_wrap">
+                    <div class="" id="week_forecast">
+                        <h4 class="row px-1 py-2">5-Day Forecast:</h4>
+
+                        <div class="row justify-content-between forecast_content_wrapper">
+                            <div class="col-2 px-1 day_forecast">
                                 <div class="fc_txt date" id="date_1">Date -- </div>
                                 <div class="fc_txt" id="card_icon">
                                     <img src="" class="week_icon" id="icon1"/>
@@ -93,7 +82,7 @@
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 day_forecast">
+                            <div class="col-2 px-1 day_forecast">
                                 <div class="fc_txt date" id="date_2">Date -- </div>
                                 <div class="fc_txt" id="card_icon">
                                     <img src="" class="week_icon" id="icon2"/>
@@ -107,7 +96,7 @@
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 day_forecast">
+                            <div class="col-2 px-1 day_forecast">
                                 <div class="fc_txt date" id="date_3">Date -- </div>
                                 <div class="fc_txt" id="card_icon">
                                     <img src="" class="week_icon" id="icon3"/>
@@ -121,7 +110,7 @@
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 day_forecast">
+                            <div class="col-2 px-1 day_forecast">
                                 <div class="fc_txt date" id="date_4">Date -- </div>
                                 <div class="fc_txt" id="card_icon">
                                     <img src="" class="week_icon" id="icon4"/>
@@ -135,7 +124,7 @@
                                     <div class="percent">&nbsp;&#37;</div>
                                 </div>
                             </div>
-                            <div class="col-2 day_forecast">
+                            <div class="col-2 px-1 day_forecast">
                                 <div class="fc_txt date" id="date_5">Date -- </div>
                                 <div class="fc_txt" id="card_icon">
                                     <img src="" class="week_icon" id="icon5"/>
@@ -153,13 +142,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/script.js"></script>
+        </main>
 
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="assets/script.js"></script>
+    </body>
 </html>

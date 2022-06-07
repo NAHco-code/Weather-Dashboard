@@ -14,3 +14,12 @@
 	--main-border-hover: rgb(102, 85, 85);
 	--section-hover: rgb(127, 124, 141);
 }
+
+
+#top_cast_wrap {
+	font-size: 0.95em;
+}
+
+#bottom_cast_wrap {
+	font-size: 0.8em;
+}
