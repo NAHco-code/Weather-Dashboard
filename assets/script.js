@@ -12,7 +12,8 @@ let savedSearchArray =
         'New York'];
 
 
-//global date variables
+// Define Global Date Variables
+// Moment.js
 let today = document.querySelector('#today');
 today.textContent = moment().format('ll');
 let tomorrow = document.querySelector('#date_1');
@@ -27,12 +28,14 @@ let tomorrow5 = document.querySelector('#date_5');
 tomorrow5.textContent = moment().add(5, 'days').format('l');
 
 
-//define function to access current weather conditions
+// Define variables for getCurrent function
 const searchBtnEl = document.querySelector('#search-btn');
 let searchInputEl = document.querySelector('#search-input');
 
+// Define getCurrent function to access current weather conditions
 function getCurrent(searchInputEl) {
 
+    // Current Weather Data API call
     let currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInputEl + '&units=imperial&appid=c6a9bf78cf3b504fe7e8382ca53765c4';
 
     fetch(currentWeatherUrl).then(function (response) {
@@ -41,14 +44,14 @@ function getCurrent(searchInputEl) {
 
                 console.log(data)
 
-                //append data from API to DOM
+                // Append data from API to DOM
                 let cityName = document.querySelector('#city_name');
                 cityName.textContent = data.name;
 
                 //icon not working
-                let icon = document.querySelector('#current_icon');
+                let icon = document.querySelector('#current-icon');
                 let iconCall = data.weather[0].icon;
-                icon.setAttribute =  ('img', 'src=`http://openweathermap.org/img/wn/`' +iconCall+ '.png');
+                icon.setAttribute('src', 'http://openweathermap.org/img/wn/' +iconCall+ '.png');
 
                 let temp = document.querySelector('#current_temp');
                 temp.textContent = 'Temperature: ' + data.main.temp;

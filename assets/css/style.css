@@ -29,6 +29,8 @@
 .row  {
 	border: solid 1px var(--bs-dark);
 }
+
+/* Menu */
 .nav-item {
 	padding: 0.125em 0 0.25em 0.15em;
 	width: 100%;
@@ -80,10 +82,24 @@ i.fas {
 #search-btn {
 	max-width: max-content;
 }
+
+/* Top Container -- Current Temp, City, + Short Descr */
+
+
 #top_cast_wrap {
 	font-size: 0.95em;
 }
+#current-icon {
+	width: 3em;
+	height: 3em;
+}
 
+
+
+
+
+
+/* Bottom Container -- Hourly, 5 Day Forecast */
 #bottom_cast_wrap {
 	font-size: 0.8em;
 }
