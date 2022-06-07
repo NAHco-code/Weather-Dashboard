@@ -16,20 +16,20 @@ let savedSearchArray =
 let today = document.querySelector('#today');
 today.textContent = moment().format('ll');
 let tomorrow = document.querySelector('#date_1');
-tomorrow.textContent = moment().add(1, 'days').format('ll');
+tomorrow.textContent = moment().add(1, 'days').format('l');
 let tomorrow2 = document.querySelector('#date_2');
-tomorrow2.textContent = moment().add(2, 'days').format('ll');
+tomorrow2.textContent = moment().add(2, 'days').format('l');
 let tomorrow3 = document.querySelector('#date_3');
-tomorrow3.textContent = moment().add(3, 'days').format('ll');
+tomorrow3.textContent = moment().add(3, 'days').format('l');
 let tomorrow4 = document.querySelector('#date_4');
-tomorrow4.textContent = moment().add(4, 'days').format('ll');
+tomorrow4.textContent = moment().add(4, 'days').format('l');
 let tomorrow5 = document.querySelector('#date_5');
-tomorrow5.textContent = moment().add(5, 'days').format('ll');
+tomorrow5.textContent = moment().add(5, 'days').format('l');
 
 
 //define function to access current weather conditions
-const searchBtnEl = document.querySelector('#search_btn');
-let searchInputEl = document.querySelector('#search_input');
+const searchBtnEl = document.querySelector('#search-btn');
+let searchInputEl = document.querySelector('#search-input');
 
 function getCurrent(searchInputEl) {
 
@@ -124,9 +124,9 @@ function getForecast(latitude, longitude) {
 };
 
 
-//select each search history div
-let searchHistCon = document.querySelector('#search_history_container')
-let searchedItemEl = searchHistCon.querySelectorAll('div.search_history');
+//select each search history list item
+let searchHistCon = document.querySelector('#search-history-list')
+let searchedItemEl = searchHistCon.querySelectorAll('li.search-history-item');
 
 console.log(searchedItemEl);
 
@@ -136,8 +136,8 @@ function renderSearchHistory() {
 
     for (i = 0; i < savedSearchArray.length; i++) {
 
-        let newSearchedItem = document.createElement('div');
-        newSearchedItem.classList.add('search_history');
+        let newSearchedItem = document.createElement('li');
+        newSearchedItem.classList.add('search-history-item');
         newSearchedItem.textContent = savedSearchArray[i];
 
         newSearchedItem.addEventListener('click', function (event) {

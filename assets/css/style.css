@@ -1,20 +1,52 @@
 :root {
-
-	--header-txt: rgb(0, 26, 75);
-	--header-border: rgba(37, 52, 78, 0.835);
-	--header-bg: rgba(250, 250, 250, 0.102);
-
-	--main: rgba(6, 17, 37, 0.945);
-	--main-txt: rgb(185, 166, 166);
-	--main-border: rgb(96, 85, 85);
-	--section: rgb(88, 85, 102);
-
-	--main-hover: rgba(37, 52, 78, 0.932);
-	--main-txt-hover: rgb(206, 196, 196);
-	--main-border-hover: rgb(102, 85, 85);
-	--section-hover: rgb(127, 124, 141);
+	--bs-blue: #0d6efd;
+	--bs-indigo: #6610f2;
+	--bs-purple: #6f42c1;
+	--bs-pink: #d63384;
+	--bs-red: #dc3545;
+	--bs-orange: #fd7e14;
+	--bs-yellow: #ffc107;
+	--bs-green: #198754;
+	--bs-teal: #20c997;
+	--bs-cyan: #0dcaf0;
+	--bs-white: #fff;
+	--bs-gray: #6c757d;
+	--bs-gray-dark: #343a40;
+	--bs-primary: #0d6efd;
+	--bs-secondary: #6c757d;
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+	--bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
+.container-fluid,
+.row  {
+	border: solid 1px var(--bs-dark);
+}
+.nav-item {
+	width: 33%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+#search-box-txt {
+	flex-direction: column;
+	align-items: center;
+}
+.input-group {
+	position: relative;
+		left: 5.125em;
+}
+#search-btn {
+	/* background-color: var(--bs-light);
+	color: var(--bs-cyan); */
+}
 
 #top_cast_wrap {
 	font-size: 0.95em;
