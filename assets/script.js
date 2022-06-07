@@ -54,10 +54,10 @@ function getCurrent(searchInputEl) {
                 icon.setAttribute('src', 'http://openweathermap.org/img/wn/' +iconCall+ '.png');
 
                 let temp = document.querySelector('#current_temp');
-                temp.textContent = 'Temperature: ' + data.main.temp;
+                temp.innerHTML = data.main.temp + `&nbsp;&#8457;`;
 
                 let humidity = document.querySelector('#current_humid');
-                humidity.textContent = 'Humidity:  ' + data.main.humidity;
+                humidity.innerHTML = 'Humidity:  ' + data.main.humidity + `&nbsp;&#37;`;
 
                 let windSpeed = document.querySelector('#current_wind');
                 windSpeed.textContent = 'Wind Speed: ' + data.wind.speed + ' mph';
