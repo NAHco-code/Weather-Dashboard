@@ -17,15 +17,15 @@ let savedSearchArray =
 let today = document.querySelector('#today');
 today.textContent = moment().format('ll');
 let tomorrow = document.querySelector('#date_1');
-tomorrow.textContent = moment().add(1, 'days').format('l');
+tomorrow.textContent = moment().add(1, 'days').format('dddd');
 let tomorrow2 = document.querySelector('#date_2');
-tomorrow2.textContent = moment().add(2, 'days').format('l');
+tomorrow2.textContent = moment().add(2, 'days').format('dddd');
 let tomorrow3 = document.querySelector('#date_3');
-tomorrow3.textContent = moment().add(3, 'days').format('l');
+tomorrow3.textContent = moment().add(3, 'days').format('dddd');
 let tomorrow4 = document.querySelector('#date_4');
-tomorrow4.textContent = moment().add(4, 'days').format('l');
+tomorrow4.textContent = moment().add(4, 'days').format('dddd');
 let tomorrow5 = document.querySelector('#date_5');
-tomorrow5.textContent = moment().add(5, 'days').format('l');
+tomorrow5.textContent = moment().add(5, 'days').format('dddd');
 
 
 // Define variables for getCurrent function
@@ -113,30 +113,29 @@ function getForecast(latitude, longitude) {
                 //TODO for loop
                 // for (i = 0; i < forecast.length; i++)
                 let temp1 = document.querySelector('#temp_1');
-                temp1.textContent = data.daily[1].temp.day;
+                temp1.innerHTML = Math.round(data.daily[1].temp.day) + `&#186;`;
                 let temp2 = document.querySelector('#temp_2');
-                temp2.textContent = data.daily[2].temp.day;
+                temp2.innerHTML = Math.round(data.daily[2].temp.day) + `&#186;`;
                 let temp3 = document.querySelector('#temp_3');
-                temp3.textContent = data.daily[3].temp.day;
+                temp3.innerHTML = Math.round(data.daily[3].temp.day) + `&#186;`;
                 let temp4 = document.querySelector('#temp_4');
-                temp4.textContent = data.daily[4].temp.day;
+                temp4.innerHTML = Math.round(data.daily[4].temp.day) + `&#186;`;
                 let temp5 = document.querySelector('#temp_5');
-                temp5.textContent = data.daily[5].temp.day;
-
+                temp5.innerHTML = Math.round(data.daily[5].temp.day) + `&#186;`;
 
                 //humidity forecast
                 //TODO for loop
                 // for (i = 0; i < forecast.length; i++)
                 let humid1 = document.querySelector('#humid_1');
-                humid1.textContent = data.daily[1].humidity;
+                humid1.innerHTML = (data.daily[1].humidity) + `&#37;`;
                 let humid2 = document.querySelector('#humid_2');
-                humid2.textContent = data.daily[2].humidity;
+                humid2.innerHTML = (data.daily[2].humidity) + `&#37;`;
                 let humid3 = document.querySelector('#humid_3');
-                humid3.textContent = data.daily[3].humidity;
+                humid3.innerHTML = (data.daily[3].humidity) + `&#37;`;
                 let humid4 = document.querySelector('#humid_4');
-                humid4.textContent = data.daily[4].humidity;
+                humid4.innerHTML = (data.daily[4].humidity) + `&#37;`;
                 let humid5 = document.querySelector('#humid_5');
-                humid5.textContent = data.daily[5].humidity;
+                humid5.innerHTML = (data.daily[5].humidity) + `&#37;`;
 
             })
         }
