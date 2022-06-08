@@ -52,9 +52,14 @@ html, body {
 	max-height: 100vh;
 }
 
-.container-fluid,
-.row  {
-	border: solid 1px var(--bs-dark);
+body {
+	/* background-color: var(--bs-gray-dark); */
+	background-color: var(--bs-primary);
+	color: var(--bs-light);
+}
+.text-muted {
+	color: var(--bs-light) !important;
+	opacity: 0.65;
 }
 
 /* Menu */
@@ -147,4 +152,9 @@ button#search-btn {
 }
 .hidden {
 	display: none;
+}
+.container-fluid,
+.container,
+.forecast-card  {
+	border: solid 1px var(--bs-dark);
 }
