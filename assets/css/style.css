@@ -25,6 +25,33 @@
 	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+/* Remove default margin + padding */
+html, body, div, span,
+footer, header,
+menu, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+html, body {
+	width: 100vw;
+	max-width: 100vw;
+	height: 100vh;
+	max-height: 100vh;
+}
+
 .container-fluid,
 .row  {
 	border: solid 1px var(--bs-dark);
@@ -69,11 +96,6 @@ i.fas {
 button#search-btn {
 	margin: auto 0.5em;
 }
-i.fas {
-	position: relative;
-	bottom: 0.075em;
-	right: 0.19em;
-}
 
 #search-input {
 	width: 73%;
@@ -83,39 +105,46 @@ i.fas {
 	max-width: max-content;
 }
 
+/* Page Layout */
+
+
 /* Top Container -- Current Temp, City, + Short Descr */
-
-
-#top_cast_wrap {
-	font-size: 0.95em;
+#current-conditions {
+	height: 60vh;
+	padding: 2em;
 }
-#today,
-#city-name {
-	visibility: hidden;
-	/* display: none; */
-}
-#current-icon {
-	/* width: 5em;
-	height: 3em; */
-}
-
-
-
-
 
 
 /* Bottom Container -- Hourly, 5 Day Forecast */
+#week-forecast {
+	height: 30vh;
+}
+
 .forecast-content-wrapper {
 	font-size: 0.7em;
 	display: flex;
 		justify-content: space-around;
-	margin: 2em auto !important;
+	padding: 2em auto !important;
 }
 .forecast-card {
 	width: 18vw;
 	display: flex;
 		flex-direction: column;
+		align-items: center;
 }
 .forecast-info {
 	display: flex;
+}
+
+
+
+
+
+/* Development */
+#today,
+#city-name {
+	display: none;
+}
+.hidden {
+	display: none;
 }
