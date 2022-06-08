@@ -15,7 +15,7 @@ let savedSearchArray =
 // Define Global Date Variables
 // Moment.js
 let today = document.querySelector('#today');
-today.textContent = moment().format('ll');
+today.textContent = moment().format('dddd');
 let tomorrow = document.querySelector('#date_1');
 tomorrow.textContent = moment().add(1, 'days').format('dddd');
 let tomorrow2 = document.querySelector('#date_2');
@@ -52,13 +52,13 @@ function getCurrent(searchInputEl) {
                 let iconCall = data.weather[0].icon;
                 icon.setAttribute('src', 'http://openweathermap.org/img/wn/' +iconCall+ '.png');
 
-                let temp = document.querySelector('#current_temp');
+                let temp = document.querySelector('#current-temp');
                 temp.innerHTML = Math.round(data.main.temp) + `&#186;`;
 
                 let description = document.querySelector('#desc');
                 description.textContent = data.weather[0].main;
 
-                let humidity = document.querySelector('#current_humid');
+                let humidity = document.querySelector('#current-humid');
                 humidity.innerHTML = 'Humidity:  ' + data.main.humidity + `&nbsp;&#37;`;
 
                 let windSpeed = document.querySelector('#current_wind');
@@ -88,7 +88,8 @@ function getForecast(latitude, longitude) {
                 let uvIndex = document.querySelector('#current_uv');
                 uvIndex.textContent = 'UV Index: ' + data.current.uvi;
 
-                //render icons
+                // Render icons for each day in forecast
+                // Note: Must use <img> tag in html to use .setAttribute method to set the img src
                 let icon1 = document.querySelector('#icon1');
                 let icon1Call = data.daily[1].weather[0].icon;
                 icon1.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon1Call+ '@2x.png');
