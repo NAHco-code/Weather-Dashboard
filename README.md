@@ -16,10 +16,10 @@ Currently working on local storage and rendering weather icons. Search history a
 
 ### Visuals
 
-![screenshot](/assets/images/weatherDash.png)
+![screenshot]()
 
 ![screenshot]()
 
 ### Links
 
-[DeployedApp] (<https://nahco-code.github.io/DashboardWeather/>)
+[DeployedApp] (<https://kathrynwilkinson.github.io/DashboardWeather/>)
