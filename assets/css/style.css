@@ -4,8 +4,7 @@ html {
 	text-transform: uppercase;
 }
 body {
-	background: rgb(131,58,180);
-	background: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%);
+	background-image: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%);
 	color: var(--bs-light);
 	font-family: inherit;
 	text-transform: inherit;
@@ -140,13 +139,10 @@ i.fas {
 	padding-top: 0.5em;
 	position: relative;
 }
-/* .day,
-.description,
-.temperature,
-.humidity, */
+/*
 .day {
 
-}
+} */
 .weather-icon {
 	width: 5em;
 	flex-shrink: 5;
@@ -154,27 +150,22 @@ i.fas {
 		/* top: 1.5em; */
 		bottom: 0.6em;
 }
-.description {
-	/* margin-top: 3em;
-	padding-top: 0.25em; */
-}
+/* .description {
+	margin-top: 3em;
+	padding-top: 0.25em;
+} */
 .temperature {
 	font-size: 1.75em!important;
 	padding-top: 0.25em;
 	margin-bottom: 1.5em;
 }
 
-.temperature {
-	font-size: 1.5em;
-}
-
 #city-name {
-	height: 20vh;
-	padding: 2em;
+	height: 11vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.5em;
+	font-size: 1.65em;
 }
 
 
