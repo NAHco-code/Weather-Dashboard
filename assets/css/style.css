@@ -13,7 +13,7 @@ body {
 
 nav {
 	background-color: rgba(64, 7, 101, 0.494);
-	margin: 0.5em;
+	margin: 0.5em 0.5em 0 0.5em;
 	border-radius: 5px;
 	border: 2px solid whitesmoke;
 	align-items: center;
@@ -103,12 +103,20 @@ i.fas {
 
 /* Top Container -- Current Temp, City, + Short Descr */
 #current-conditions {
-	height: 40vh;
-	padding: 2em;
+	height: 45vh;
+	padding: 0.75em;
+}
+#current-icon {
+	width: 2em;
+	margin-bottom: 1em;
+}
+#current-temp {
+	font-size: 5em;
+	position: relative;
+		left: 0.2em;
 }
 
-
-/* Bottom Container -- Hourly, 5 Day Forecast */
+/* Middle Container -- Hourly, 5 Day Forecast */
 #week-forecast {
 	height: 30vh;
 }
@@ -116,20 +124,44 @@ i.fas {
 .forecast-content-wrapper {
 	display: flex;
 		justify-content: space-around;
-	padding: 2em auto !important;
 }
 .forecast-card {
-	width: 15vw;
+	width: 17vw;
 	display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		flex-shrink: 10;
 	margin: auto;
-	padding: 15px 0;
 	background-color: #ffffff1a;
 	border-radius: 5px;
 	font-size: 0.7em;
 	font-weight: 300;
+	padding-top: 0.5em;
+	position: relative;
+}
+/* .day,
+.description,
+.temperature,
+.humidity, */
+.day {
+
+}
+.weather-icon {
+	width: 5em;
+	flex-shrink: 5;
+	position: absolute;
+		/* top: 1.5em; */
+		bottom: 0.6em;
+}
+.description {
+	/* margin-top: 3em;
+	padding-top: 0.25em; */
+}
+.temperature {
+	font-size: 1.75em!important;
+	padding-top: 0.25em;
+	margin-bottom: 1.5em;
 }
 
 .temperature {
