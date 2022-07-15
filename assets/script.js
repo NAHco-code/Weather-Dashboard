@@ -19,15 +19,15 @@ time.textContent = moment().format('h:mm a');
 let today = document.querySelector('#today');
 today.textContent = moment().format('MMM D');
 let tomorrow = document.querySelector('#date_1');
-tomorrow.textContent = moment().add(1, 'days').format('dddd');
+tomorrow.textContent = moment().add(1, 'days').format('ddd');
 let tomorrow2 = document.querySelector('#date_2');
-tomorrow2.textContent = moment().add(2, 'days').format('dddd');
+tomorrow2.textContent = moment().add(2, 'days').format('ddd');
 let tomorrow3 = document.querySelector('#date_3');
-tomorrow3.textContent = moment().add(3, 'days').format('dddd');
+tomorrow3.textContent = moment().add(3, 'days').format('ddd');
 let tomorrow4 = document.querySelector('#date_4');
-tomorrow4.textContent = moment().add(4, 'days').format('dddd');
+tomorrow4.textContent = moment().add(4, 'days').format('ddd');
 let tomorrow5 = document.querySelector('#date_5');
-tomorrow5.textContent = moment().add(5, 'days').format('dddd');
+tomorrow5.textContent = moment().add(5, 'days').format('ddd');
 
 
 // Define variables for getCurrent function
