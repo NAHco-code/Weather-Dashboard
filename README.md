@@ -12,16 +12,20 @@ User experience is intuitive and easy to navigate; user interface style is clean
 ## Road Map
 <!-- Currently working on local storage and rendering weather icons. Search history appends entire search history + most recently serached - must clear data that is already rendered before appending. -->
 
-Currently only styled for mobile.
-Will add media queries to display properly on all viewport sizes.
-Will add bootstrap downdown sections in menu to display recent history and saved cities.
+Currently only styled for mobile. In progress.
+
+TODO:
+	- media queries to display properly on all viewport sizes
+	- implement bootstrap downdown sections in menu to display recent history and saved cities
+	- word suggestions in search bar
+	- bootstrap carousel for different displays with more weather information
 
 ### Visuals
 
-![screenshot]()
+![screenshot](./assets/images/weather-2.0-mobile.png)
 
-![screenshot]()
+![screenshot](./assets/images/weather-2.0-mobile-menu.png)
 
-### Links
+<!-- ### Links
 
-[DeployedApp] (<https://kathrynwilkinson.github.io/DashboardWeather/>)
+[DeployedApp] (<https://kathrynwilkinson.github.io/DashboardWeather/>) -->
