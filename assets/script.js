@@ -112,6 +112,20 @@ function getForecast(latitude, longitude) {
                 let icon5Call = data.daily[5].weather[0].icon;
                 icon5.setAttribute('src', 'http://openweathermap.org/img/wn/' +icon5Call+ '@2x.png');
 
+
+                //description forecast
+                //TODO: for loop
+                let desc1 = document.querySelector('#desc_1');
+                desc1.innerHTML = (data.daily[1].weather[0].main);
+                let desc2 = document.querySelector('#desc_2');
+                desc2.innerHTML = (data.daily[2].weather[0].main);
+                let desc3 = document.querySelector('#desc_3');
+                desc3.innerHTML = (data.daily[3].weather[0].main);
+                let desc4 = document.querySelector('#desc_4');
+                desc4.innerHTML = (data.daily[4].weather[0].main);
+                let desc5 = document.querySelector('#desc_5');
+                desc5.innerHTML = (data.daily[5].weather[0].main);
+
                 //temp forecast
                 //TODO for loop
                 // for (i = 0; i < forecast.length; i++)
