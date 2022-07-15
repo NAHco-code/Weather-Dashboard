@@ -10,6 +10,23 @@ body {
 	color: var(--bs-light);
 }
 
+nav {
+	background-color: rgba(64, 7, 101, 0.494);
+	margin: 0.5em;
+	border-radius: 5px;
+	border: 2px solid whitesmoke;
+	align-items: center;
+	justify-content: center;
+}
+
+nav button {
+	color: whitesmoke !important;
+	height: 2.5em;
+	width: 2.5em;
+	display: flex;
+
+}
+
 .text-muted {
 	color: var(--bs-light) !important;
 	opacity: 0.65;
@@ -103,17 +120,23 @@ button#search-btn {
 	font-weight: 300;
 }
 
+.temperature {
+	font-size: 1.5em;
+}
+
 #city-name {
 	height: 20vh;
 	padding: 2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 1.5em;
 }
 
 
 /* Development */
 
-.hidden {
+.hidden,
+.humidity {
 	display: none;
 }
