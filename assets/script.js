@@ -18,6 +18,7 @@ let time = document.querySelector('#time');
 time.textContent = moment().format('h:mm a');
 let today = document.querySelector('#today');
 today.textContent = moment().format('MMM D');
+
 let tomorrow = document.querySelector('#date_1');
 tomorrow.textContent = moment().add(1, 'days').format('ddd');
 let tomorrow2 = document.querySelector('#date_2');
