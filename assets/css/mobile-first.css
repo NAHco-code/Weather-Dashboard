@@ -70,7 +70,7 @@ input#search-input {
 	border-radius: 3px;
 	font-family: 'Source Sans Pro', sans-serif;
 }
-.input-group-btn {
+.input-group-div {
 	background-color: rgba(0, 119, 255, 0.77);
 	border: 3px solid rgba(245, 245, 245, 0);
 	border-radius: 3px!important;
@@ -81,7 +81,7 @@ input#search-input {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	z-index: -10!important;
+	position: relative;
 }
 button#search-btn,
 i.fas {
@@ -95,6 +95,11 @@ i.fas {
 #search-icon {
 	max-width: max-content;
 	display: flex;
+	position: relative;
+}
+
+#search-btn {
+	position: relative;
 }
 
 /* Page Layout */
