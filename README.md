@@ -6,21 +6,19 @@ A weather application that allows a user to search the weather outlook for multi
 
 ## Features
 
- Upon searching a city, user is presented with current and future conditions for that city. <!--, + the city is saved in the search history. Current weather conditions reflect the temperature, humidity, wind speed, and the UV index. UV index is color coded to indicate whether the conditions are favorable, moderate, or severe. -->Future weather conditions present a 5-day forecast that displays the date, weather conditions, and temperature. <!--, and humidity. Cities saved in search history render both current and future conditions when clicked. -->
+ Upon searching a city, user is presented with current and future conditions for that city. , + the city is saved in the search history. <!--Current weather conditions reflect the temperature, humidity, wind speed, and the UV index. UV index is color coded to indicate whether the conditions are favorable, moderate, or severe. -->Future weather conditions present a 5-day forecast that displays the date, weather conditions, and temperature. Cities saved in search history render conditions when clicked.
 
 User experience is intuitive and easy to navigate; user interface style is clean and polished.
 
 ## Road Map
 
-<!-- Currently working on local storage and rendering weather icons. Search history appends entire search history + most recently serached - must clear data that is already rendered before appending. -->
-
 Currently only styled for mobile. In progress.
 
 TODO:
-	- media queries to display properly on all viewport sizes
-	- implement bootstrap downdown sections in menu to display recent history and saved cities
-	- word suggestions in search bar
-	- bootstrap carousel for different displays with more weather information
+
+- media queries to display properly on all viewport sizes
+- word suggestions in search bar / check for edge cases for misspelled cities, etc.
+- bootstrap carousel for different displays with more weather information
 
 ### Visuals
 
@@ -28,6 +26,6 @@ TODO:
 
 ![screenshot](./assets/images/weather-2.0-mobile-menu.png)
 
-<!-- ### Links
+### Links
 
-[DeployedApp] (<https://kathrynwilkinson.github.io/DashboardWeather/>) -->
+[Deployed on GitHub Pages](<https://kathrynwilkinson.github.io/Weather-App/>)
