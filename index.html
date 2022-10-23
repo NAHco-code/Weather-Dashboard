@@ -23,7 +23,8 @@
             <nav class="btn-group dropend">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
                 <ul class="dropdown-menu" id="popout-menu">
-                    <li class="nav-item" id="search-box-txt">Search
+
+                    <li class="nav-item dropdown-item" id="search-box-txt">Search
                         <form class="active search-form " aria-current="page" href="#">
                             <div class="input-group">
                                 <input type="text" class="input" id="search-input">
@@ -36,12 +37,16 @@
                         </form>
                     </li>
 
-                    <li class="nav-item dropdown"> History
-                        <ul class="dropdown-menu" id="search-history-list"><!--append search history in script--></ul>
+                    <li id="search-hist-menu-li" class="nav-item dropdown-item"> History
+                        <ul id="search-history-list">
+                            <!--append search history in script-->
+                        </ul>
                     </li>
 
-                    <li class="nav-item dropdown"> Starred
-                        <ul class="dropdown-menu" id="favorites-list"><!--append search history in script--></ul>
+                    <li class="nav-item dropdown-item"> Starred
+                        <ul id="favorites-list">
+                            <!--append search history in script-->
+                        </ul>
                     </li>
                 </ul>
             </nav>

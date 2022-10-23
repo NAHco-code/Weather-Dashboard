@@ -101,6 +101,11 @@ i.fas {
 #search-btn {
 	position: relative;
 }
+/* Search History */
+#search-history-list {
+	height: max-content;
+}
+
 
 /* Page Layout */
 
