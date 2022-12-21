@@ -37,5 +37,5 @@ TODO:
 
 ### Links
 
-[Source Code](https://github.com/kathrynwilkinson/Weather-App)
-[GitHub Pages](<https://kathrynwilkinson.github.io/Weather-App/>)
+- [Source Code](https://github.com/kathrynwilkinson/Weather-App)
+- [GitHub Pages](<https://kathrynwilkinson.github.io/Weather-App/>)
