@@ -10,7 +10,16 @@ A weather application that allows a user to search the weather outlook for multi
 
 User experience is intuitive and easy to navigate; user interface style is clean and polished.
 
-## Road Map
+## Tech
+
+- HTML
+- CSS
+- JavaScript
+- [Bootstrap](https://blog.getbootstrap.com/2021/06/22/bootstrap-5-0-2/)
+- [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [Open Weather API](https://openweathermap.org/api)
+
+<!-- ## Road Map
 
 Currently only styled for mobile. In progress.
 
@@ -18,7 +27,7 @@ TODO:
 
 - media queries to display properly on all viewport sizes
 - word suggestions in search bar / check for edge cases for misspelled cities, etc.
-- bootstrap carousel for different displays with more weather information
+- bootstrap carousel for different displays with more weather information -->
 
 ### Visuals
 
@@ -28,4 +37,5 @@ TODO:
 
 ### Links
 
-[Deployed on GitHub Pages](<https://kathrynwilkinson.github.io/Weather-App/>)
+[Source Code](https://github.com/kathrynwilkinson/Weather-App)
+[GitHub Pages](<https://kathrynwilkinson.github.io/Weather-App/>)

@@ -4,27 +4,48 @@ html {
 	text-transform: uppercase;
 }
 body {
-	background-image: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%);
+	background-image: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%) !important;
 	color: var(--bs-light);
 	font-family: inherit;
 	text-transform: inherit;
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
-
+div.navbar {
+	margin: 0;
+	padding: 0;
+	background-color:rgba(5, 28, 56, 0.926);
+}
 nav {
 	background-color: rgba(64, 7, 101, 0.494);
-	margin: 0.5em 0.5em 0 0.5em;
+	margin: 0.3rem;
 	border-radius: 5px;
-	border: 2px solid whitesmoke;
+	border: 1px solid whitesmoke;
 	align-items: center;
 	justify-content: center;
 }
-
 nav button {
 	color: whitesmoke !important;
-	height: 2.5em;
-	width: 2.5em;
+	height: 2em;
+	width: 2em;
 	display: flex;
-
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+button.btn {
+	bottom: 0.15rem;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	justify-content: space-between;
+	background-image: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%) !important;
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
 
 .text-muted {
@@ -35,17 +56,27 @@ nav button {
 #today,
 #city-name {
 	font-weight: 300;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.217);
+}
+#time {
+	margin-top: .75rem;
+	font-size: 1.15rem;
 }
 
 /* Menu */
 #popout-menu {
-	background-color: rgba(255, 255, 255, 0.272);
+	background-color: rgba(235, 235, 235, 0.855);
 	margin: auto;
+	padding: 0.15rem;
 }
 .nav-item {
 	padding: 0.15em 0.15em 0.15em 0.5em;
 	width: 100%;
 	font-size: 90%;
+}
+#search-box-txt {
+	display: flex;
+	flex-direction: column;
 }
 .search-form {
 	display: inline-flex;
@@ -89,21 +120,21 @@ i.fas {
 	margin: auto;
 	height: 95%;
 }
-
-
 #search-btn,
 #search-icon {
 	max-width: max-content;
 	display: flex;
 	position: relative;
 }
-
 #search-btn {
 	position: relative;
 }
 /* Search History */
 #search-history-list {
 	height: max-content;
+	text-transform: capitalize;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 }
 
 
@@ -112,75 +143,93 @@ i.fas {
 
 /* Top Container -- Current Temp, City, + Short Descr */
 #current-conditions {
-	height: 45vh;
 	padding: 0.75em;
+	padding-bottom: 0;
+}
+.current-icon-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.15rem;
+	width: 100%;
+	background-color: #bcbcbc57;
+	box-shadow: 1px 1px rgba(0, 0, 0, 0.269);
+	border-radius: 5px;
+	/* margin-top: 1rem; */
+	/* margin-bottom: 1rem; */
 }
 #current-icon {
-	width: 2em;
-	margin-bottom: 1em;
+	width: 7.5rem;
+	/* margin-bottom: 1em; */
 }
 #current-temp {
-	font-size: 5em;
+	font-size: 6em;
 	position: relative;
-		left: 0.2em;
+		left: 1.5rem;
+		top: 1rem;
+	margin-top: 1rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.269);
+}
+#desc {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	font-weight: 300;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.269);
 }
 
 /* Middle Container -- Hourly, 5 Day Forecast */
-#week-forecast {
-	height: 30vh;
-}
 
+#week-forecast {
+	height: max-content;
+}
 .forecast-content-wrapper {
 	display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 }
 .forecast-card {
-	width: 17vw;
+	width: 4rem;
 	display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-shrink: 10;
 	margin: auto;
-	background-color: #ffffff1a;
+	margin-top: 0.75rem;
+	/* background-color: #444e5f40; */
+	background-color: #bcbcbc57;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.269);
 	border-radius: 5px;
-	font-size: 0.7em;
+	font-size: 0.7rem;
 	font-weight: 300;
-	padding-top: 0.5em;
+	padding-top: 0.25rem;
 	position: relative;
 }
-/*
-.day {
-
-} */
 .weather-icon {
 	width: 5em;
 	flex-shrink: 5;
 	position: absolute;
-		/* top: 1.5em; */
-		bottom: 0.6em;
+		bottom: 0.25rem;
 }
-/* .description {
-	margin-top: 3em;
-	padding-top: 0.25em;
-} */
 .temperature {
 	font-size: 1.75em!important;
-	padding-top: 0.25em;
-	margin-bottom: 1.5em;
+	padding-top: 0.15rem;
+	margin-bottom: 1.35rem;
 }
-
-#city-name {
-	height: 11vh;
+div.text-muted#city-name {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 1.65em;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+	height: max-content;
+	background-color: transparent;
+	position: relative;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.269);
+
 }
 
-
 /* Development */
-
 .hidden,
 .humidity {
 	display: none;
