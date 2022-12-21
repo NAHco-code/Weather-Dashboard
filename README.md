@@ -25,15 +25,15 @@ Currently only styled for mobile. In progress.
 
 TODO:
 
-- media queries to display properly on all viewport sizes
+- media queries to display properly on larger viewport sizes
 - word suggestions in search bar / check for edge cases for misspelled cities, etc.
 - bootstrap carousel for different displays with more weather information -->
 
 ### Visuals
 
-![screenshot](./assets/images/weather-2.0-mobile.png)
+![screenshot](./assets/images/weather-3.0.PNG)
 
-![screenshot](./assets/images/weather-2.0-mobile-menu.png)
+![screenshot](./assets/images/weather-3.0-search.PNG)
 
 ### Links
 
