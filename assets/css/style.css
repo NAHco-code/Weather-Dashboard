@@ -42,7 +42,6 @@ main {
 	flex-direction: column;
 	height: 100%;
 	position: relative;
-	justify-content: space-between;
 	background-image: linear-gradient(rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgb(67, 14, 102) 100%) !important;
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -148,14 +147,15 @@ i.fas {
 }
 .current-icon-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0.15rem;
 	width: 100%;
-	background-color: #bcbcbc57;
+	background-color: #bcbcbc33;
 	box-shadow: 1px 1px rgba(0, 0, 0, 0.269);
 	border-radius: 5px;
-	/* margin-top: 1rem; */
+	margin-top: 1rem;
 	/* margin-bottom: 1rem; */
 }
 #current-icon {
@@ -171,8 +171,8 @@ i.fas {
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.269);
 }
 #desc {
-	margin-top: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 0;
+	margin-top: .5rem;
 	font-weight: 300;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.269);
 }
@@ -187,7 +187,6 @@ i.fas {
 		justify-content: space-between;
 }
 .forecast-card {
-	width: 4rem;
 	display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -211,17 +210,18 @@ i.fas {
 		bottom: 0.25rem;
 }
 .temperature {
-	font-size: 1.75em!important;
+	font-size: 1.5rem;
 	padding-top: 0.15rem;
-	margin-bottom: 1.35rem;
+	margin-bottom: 1.6rem;
 }
 div.text-muted#city-name {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 1.65em;
-	margin-top: 2.5rem;
-	margin-bottom: 2.5rem;
+	/* margin-top: 2.5rem;
+	margin-bottom: 2.5rem; */
+	margin: auto;
 	height: max-content;
 	background-color: transparent;
 	position: relative;

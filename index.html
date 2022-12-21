@@ -12,6 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&family=Rubik+80s+Fade&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
 
         <title>Current Weather</title>
     </head>
@@ -51,7 +53,7 @@
         </div>
 
 
-        <main class="d-flex flex-column justify-content-center gy-2">
+        <main class="d-flex flex-column gy-2">
 
             <!-- Current Weather Display -->
             <div class="container" id="current-conditions">
@@ -60,8 +62,8 @@
                     <div class="" id="today"></div>
 
                     <div class="display-1" id="current-temp"></div>
-                    <div class="lead text-muted" id="desc"></div>
                     <div class="current-icon-wrapper">
+                        <div class="lead text-muted" id="desc"></div>
                         <img class="display-1" id="current-icon"/>
                     </div>
                 </div>
