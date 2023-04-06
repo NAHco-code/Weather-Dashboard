@@ -34,7 +34,7 @@ tomorrow5.textContent = moment().add(5, 'days').format('ddd');
 
 
 // Define variables for getCurrent function
-const searchBtnEl = document.querySelector('#search-btn-group');
+const searchBtnEl = document.querySelector('#search-btn');
 const searchInputEl = document.querySelector('#search-input');
 
 // Define getCurrent function to access current weather conditions
@@ -193,13 +193,14 @@ function renderSearchHistory() {
 
 //add event listener to search button
 searchBtnEl.addEventListener('click', function (event) {
-    // event.preventDefault();
+    event.preventDefault();
 
     //use event to access user input
     console.log(event);
     let userInput= searchInputEl.value;
 
     getCurrent(userInput);
+    console.log(userInput);
 
     //TODO: if statement to check edge cases of misspelled cities, etc
 
