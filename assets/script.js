@@ -177,8 +177,6 @@ function renderSearchHistory() {
 
         const newSearchedItem = document.createElement('li');
         newSearchedItem.classList.add('search-history-item');
-        // newSearchedItem.classList.add('dropdown-item');
-        // newSearchedItem.setAttribute('href', '#');
         newSearchedItem.textContent = savedSearchArray[i];
 
         newSearchedItem.addEventListener('click', function (event) {
@@ -187,7 +185,11 @@ function renderSearchHistory() {
 
         })
 
-        searchHistCon.appendChild(newSearchedItem)
+        if (newSearchedItem.textContent !== "") {
+            searchHistCon.prepend(newSearchedItem);
+        }
+
+
     }
 }
 
@@ -200,7 +202,6 @@ searchBtnEl.addEventListener('click', function (event) {
     let userInput= searchInputEl.value;
 
     getCurrent(userInput);
-    console.log(userInput);
 
     //TODO: if statement to check edge cases of misspelled cities, etc
 
